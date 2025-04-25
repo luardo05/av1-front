@@ -1,0 +1,17 @@
+{
+    "name": "Economapa",
+    "short_name": "EcoMapa",
+    "description": "Aplicativo para buscar e comparar preços de produtos em mercados.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#E3F2FD",
+    "theme_color": "#567690",
+    "orientation": "portrait",
+    "icons": [
+      {
+        "src": "icons/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ]
+  }

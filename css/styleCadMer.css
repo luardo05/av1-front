@@ -1,0 +1,220 @@
+body {
+    background-color: #E3F2FD;
+    /* Azul claro suave */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    height: 100vh;
+    /* Opcional: para que a section ocupe toda a altura da tela */
+    flex-direction: column;
+    /* Para alinhar os itens em coluna (caso precise) */
+}
+
+/* Container para o título */
+.header-container {
+    width: 100%;
+    /* Garante que o container ocupe 100% da largura */
+    /* Remover display: flex e centralizar de outra forma */
+    display: block;
+    /* Ou 'display: flex' sem 'justify-content' */
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+    background-color: #567690;
+    color: #ffffff;
+    width: 100%;
+    /* Agora deve ocupar toda a largura da tela */
+    box-sizing: border-box;
+    /* Considera padding e borda dentro da largura */
+}
+
+/* Barra de navegação */
+nav {
+    background-color: #7b92a4;
+    /* Azul bebê claro */
+    padding: 10px;
+    top: 0;
+    left: 0;
+}
+
+/* Estilo da lista de navegação */
+nav ul {
+    list-style: none;
+    margin: 10;
+    padding: 0;
+    display: flex;
+}
+
+/* Links de navegação */
+nav ul li {
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.btn-retorno {
+    background-color: #7b92a4;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-retorno:hover {
+    background-color: #5a6b7c;
+}
+
+/* Formulário */
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo dos grupos de campos */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input[type="file"] {
+    padding: 0;
+}
+
+/* Estilo do botão de submit */
+.form-group button {
+    width: 100%;
+    padding: 12px;
+    background-color: #567690;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #4c6274;
+}
+
+.form-group input {
+    width: 95%;
+    /* Altere a largura se necessário */
+    padding: 5px;
+    /* Ajuste o espaço interno do campo */
+    font-size: 14px;
+    /* Ajuste o tamanho da fonte */
+    border: 1px solid #333;
+}
+
+@media (max-width: 768px) {
+
+    nav ul {
+        justify-content: space-around; /* Espaço igual entre os itens */
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    /* Formulário */
+    .form-container {
+        width: 80%;
+        max-width: 600px;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilo dos grupos de campos */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 16px;
+        color: #333;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .form-group input[type="file"] {
+        padding: 0;
+    }
+
+    /* Estilo do botão de submit */
+    .form-group button {
+        width: 100%;
+        padding: 15px;
+        background-color: #567690;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .form-group button:hover {
+        background-color: #4c6274;
+    }
+
+    .form-group input {
+        width: 95%;
+        /* Altere a largura se necessário */
+        padding: 5px;
+        /* Ajuste o espaço interno do campo */
+        font-size: 14px;
+        /* Ajuste o tamanho da fonte */
+        border: 1px solid #333;
+    }
+
+}

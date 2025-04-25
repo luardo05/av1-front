@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS\styleProd.css">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <title>Economapa</title>
+</head>
+
+<body>
+    <div class="header-container">
+        <h1>Economapa</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Mercado</a></li>
+            <li><a href="pesquisa.html">Pesquisar</a></li>
+            <li><a href="#contato">Perfil</a></li>
+        </ul>
+    </nav>
+
+    <section class="market-info">
+        <img src="img/Assai.jpeg" alt="Foto do Mercado">
+        <div>
+            <h2>Assaí</h2>
+            <p>Av. Recife, 5777.</p>
+        </div>
+    </section>
+
+    <!-- Barra de Pesquisa -->
+    <!-- <div class="search-container">
+        <input type="text" id="search" placeholder="Buscar produtos..." />
+        <button type="submit">Buscar</button>
+    </div> -->
+
+    <div class="search-container">
+        <button id="addProductBtn">Adicionar Produto</button>
+    </div>
+
+    <table id="productsTable">
+        <thead>
+            <tr>
+                <th>Nome do Produto:</th>
+                <th>Descrição:</th>
+                <th>Marca:</th>
+                <th>Preço:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os usuários serão listados aqui via JS -->
+        </tbody>
+    </table>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Adicionar Produto</h2>
+            <form id="productForm">
+                <label for="nome_produto">Nome do produto:</label>
+                <input type="text" id="product_name" name="product_name" required>
+
+                <label for="mercado">Descrição:</label>
+                <input type="text" id="market" name="market" required>
+
+                <label for="marca">Marca:</label>
+                <input type="text" id="brand" name="brand" required>
+
+                <label for="preco">Preço:</label>
+                <input type="text" id="price" name="price" required>
+
+                <button type="submit" id="saveProductBtn">Salvar</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/product.js"></script>
+</body>
+
+</html>

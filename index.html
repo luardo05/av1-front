@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS\style.css">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <title>Economapa</title>
+</head>
+
+<body>
+    <div class="header-container">
+        <h1>Economapa</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Mercado</a></li>
+            <li><a href="pesquisa.html">Pesquisar</a></li>
+            <li><a href="#contato">Perfil</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="card-container">
+            <a href="prod.html" class="card">
+                <img src="img\Assai.jpeg" alt="">
+                <h3>Assaí</h3>
+                <p>Av. Recife, 5777.</p>
+            </a>
+            <a href="" class="card">
+                <img src="img\mixM.png" alt="">
+                <h3>Mix Mateus</h3>
+                <p>Av. Caxangá, 3942.</p>
+            </a>
+            <a href="cadMer.html" class="card">
+                <img src="img\add.png" alt="">
+                <h3>Adicionar mercado</h3>
+                <p></p>
+            </a>
+
+        </div>
+    </section>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(reg => {
+                        console.log('Service Worker registrado com sucesso!', reg);
+                    })
+                    .catch(err => {
+                        console.log('Erro ao registrar o Service Worker:', err);
+                    });
+            });
+        }
+    </script>
+
+</body>
+
+</html>

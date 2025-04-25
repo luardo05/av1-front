@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS\styleCad.css">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <title>Economapa</title>
+</head>
+
+<body>
+    <div class="header-container">
+        <h1>Economapa</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Mercado</a></li>
+            <li><a href="pesquisa.html">Pesquisar</a></li>
+            <li><a href="#contato">Perfil</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="form-container">
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <h2>Cadastrar produto</h2>
+                <div class="form-group">
+                    <label for="nomeProduto">Nome do Produto:</label>
+                    <input type="text" id="product_name" name="product_name" required placeholder="Nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="marca">Marca:</label>
+                    <input type="text" id="brand" name="brand" required placeholder="Marca">
+                </div>
+
+                <div class="form-group">
+                    <label for="preco">Preço:</label>
+                    <input type="text" id="price" name="price" oninput="formatarPreco()" required placeholder="R$:">
+                </div>
+
+                <!-- <div class="form-group">
+                    <label for="foto">Foto:</label>
+                    <input type="file" id="foto" name="foto" accept="image/*" required>
+                </div> -->
+
+                <div class="form-group">
+                    <button type="submit">Cadastrar Produto</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="js/product.js"></script>
+</body>
+
+</html>

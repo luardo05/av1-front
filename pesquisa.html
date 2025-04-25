@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS\style.css">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <title>Economapa</title>
+</head>
+
+<body>
+    <div class="header-container">
+        <h1>Economapa</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Mercado</a></li>
+            <li><a href="pesquisa.html">Pesquisar</a></li>
+            <li><a href="#contato">Perfil</a></li>
+        </ul>
+    </nav>
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Buscar produtos..." />
+        <button type="button" id="search-btn">Buscar</button>
+    </div>
+
+    <div id="resultados"></div>
+    <script>
+        document.getElementById('search-btn').addEventListener('click', async () => {
+            const termo = document.getElementById('search').value;
+
+            const resposta = await fetch(`http://localhost:3000/api/products?q=${encodeURIComponent(termo)}`);
+            const dados = await resposta.json();
+
+            const container = document.getElementById('resultados');
+            container.innerHTML = '';
+
+            if (dados.length === 0) {
+                container.innerHTML = '<p>Nenhum produto encontrado.</p>';
+                return;
+            }
+
+            dados.forEach(produto => {
+                const div = document.createElement('div');
+                div.innerHTML = `
+                    <strong>${produto.product_name}</strong><br>
+                    Marca: ${produto.brand}<br>
+                    Mercado: ${produto.market}<br>
+                    Preço: R$ ${produto.price}
+                    <hr>
+                `;
+                container.appendChild(div);
+            });
+        });
+
+        
+    </script>
+
+</body>
+
+</html>

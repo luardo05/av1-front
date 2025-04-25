@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS\styleCadMer.css">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <title>Economapa</title>
+</head>
+
+<body>
+    <div class="header-container">
+        <h1>Economapa</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Mercado</a></li>
+            <li><a href="pesquisa.html">Pesquisar</a></li>
+            <li><a href="#contato">Perfil</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="form-container">
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <h2>Cadastrar mercado</h2>
+
+                <div class="form-group">
+                    <label for="foto">Foto do Mercado:</label>
+                    <input type="file" id="foto" name="foto" accept="image/*" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nomeProduto">Nome do mercado:</label>
+                    <input type="text" id="nomeProduto" name="nomeProduto" required placeholder="Nome do mercado">
+                </div>
+
+                <div class="form-group">
+                    <label for="marca">Endereço</label>
+                    <input type="text" id="marca" name="marca" required placeholder="Endereço">
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Cadastrar mercado</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
